@@ -1,5 +1,5 @@
 import React from 'react';
-import Highcharts from 'highcharts';
+import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 
 const ShareBox = () => {
@@ -17,10 +17,7 @@ const ShareBox = () => {
 
     return (
         <div className="sharebox">
-            <HighchartsReact
-            highcharts={Highcharts}
-            constructorType={'stockChart'}
-            options={options}
+            <HighchartsReact highcharts={Highcharts} constructorType={'stockChart'} options={options}
             />
         </div>
     )
