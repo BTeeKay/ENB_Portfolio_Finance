@@ -26,5 +26,13 @@ const PortfolioService = {
                 'Content-type': 'application/json'
             }
         })
+    },
+
+    deletePortfolioShares(id) {
+        return fetch(baseURL + id, {
+            method: 'DELETE'
+        });
     }
-}
+};
+
+export default PortfolioService;
