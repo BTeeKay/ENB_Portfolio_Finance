@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ShareBox from '../components/ShareBox';
 import PortfolioList from '../components/PortfolioList';
 import PortfolioService from '../services/PortfolioService';
+import ChartBox from '../components/ChartBox';
 
 const MainContainer = () => {
 
@@ -32,8 +33,8 @@ const MainContainer = () => {
     return (
         <div className="maincontainer">
             <h1>This is main container</h1>
-            <ShareBox />
             <PortfolioList portfolioShares={portfolioShares} />
+            <ChartBox />
         </div>
     )
 };
