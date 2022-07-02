@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ShareBox from '../components/ShareBox';
 import PortfolioList from '../components/PortfolioList';
 import PortfolioService from '../services/PortfolioService';
+import ChartBox from '../components/ChartBox';
 import MarketBox from '../components/MarketBox';
 
 const MainContainer = () => {
@@ -40,9 +41,9 @@ const MainContainer = () => {
         <div className="maincontainer">
             <h1>This is main container</h1>
             {/* getStockHistory={getStockHistory} */}
-            <ShareBox/>
             <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare}/>
             <PortfolioList portfolioShares={portfolioShares} />
+            <ChartBox />
         </div>
     )
 };
