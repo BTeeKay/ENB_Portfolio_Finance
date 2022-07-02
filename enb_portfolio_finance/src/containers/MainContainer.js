@@ -4,21 +4,25 @@ import ShareBox from '../components/ShareBox';
 const MainContainer = () => {
 
     const shares_api = process.env.alphavantage_API
+    const API_KEY = process.env.REACT_APP_API_KEY
 
     const [searchStock, setSearchStock] = useState("")
     const [stockDaily, setStockDaily] = useState("")
     const [stockIntraDay, setStockIntraDay] = useState("")
 
     useEffect( () => {
-    fetch( `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchStock}&apikey=${shares_api}` )
-        .then(res => res.json())
-        .then( data => setSearchStock(data))
-    fetch( `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${stockIntraDay}interval=5min&apikey=${shares_api}` )
-        .then(res => res.json())
-        .then( data => setStockIntraDay(data))
+    // fetch( `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchStock}&apikey=${shares_api}` )
+    //     .then(res => res.json())
+    //     .then( data => setSearchStock(data))
+    // fetch( `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${stockIntraDay}interval=5min&apikey=${shares_api}` )
+    //     .then(res => res.json())
+    //     .then( data => setStockIntraDay(data))
     fetch( `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockDaily}&outputsize=full&apikey=${shares_api}`)
         .then(res => res.json())
         .then( data => setStockDaily(data))
+    fetch(`https://cloud.iexapis.com/stable/stock/${stock}/quote?token=${API_KEY}`)
+        .then(result => result.json())
+        .then(stocks => getStocks(stocks))
     }, [])
 
 
