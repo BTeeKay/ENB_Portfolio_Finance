@@ -1,5 +1,5 @@
 import React from 'react';
-import PortfolioListItem from "'/PortfolioListItem";
+import PortfolioListItem from "./PortfolioListItem";
 
 const PortfolioList = ({ portfolio_shares }) => {
     const portfolioNodes = portfolio_shares.map(share => {

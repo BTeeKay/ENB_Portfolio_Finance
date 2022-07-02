@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ShareBox from '../components/ShareBox';
+import PortfolioList from '../components/PortfolioList';
 
 const MainContainer = () => {
 
@@ -10,20 +11,15 @@ const MainContainer = () => {
     const [stockDaily, setStockDaily] = useState("")
     const [stockIntraDay, setStockIntraDay] = useState("")
 
-    useEffect( () => {
-    // fetch( `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchStock}&apikey=${shares_api}` )
-    //     .then(res => res.json())
-    //     .then( data => setSearchStock(data))
-    // fetch( `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${stockIntraDay}interval=5min&apikey=${shares_api}` )
-    //     .then(res => res.json())
-    //     .then( data => setStockIntraDay(data))
-    fetch( `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockDaily}&outputsize=full&apikey=${shares_api}`)
-        .then(res => res.json())
-        .then( data => setStockDaily(data))
-    fetch(`https://cloud.iexapis.com/stable/stock/${stock}/quote?token=${API_KEY}`)
-        .then(result => result.json())
-        .then(stocks => getStocks(stocks))
-    }, [])
+    // useEffect( () => {
+
+    // // fetch( `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockDaily}&outputsize=full&apikey=${shares_api}`)
+    // //     .then(res => res.json())
+    // //     .then( data => setStockDaily(data))
+    // // fetch(`https://cloud.iexapis.com/stable/stock/${stock}/quote?token=${API_KEY}`)
+    // //     .then(result => result.json())
+    // //     .then(stocks => getStocks(stocks))
+    // // }, [])
 
 
     return (
