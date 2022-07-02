@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import ShareBox from '../components/ShareBox';
 import PortfolioList from '../components/PortfolioList';
+import PortfolioService from '../services/PortfolioService';
 
 const MainContainer = () => {
 
@@ -10,6 +11,7 @@ const MainContainer = () => {
     const [searchStock, setSearchStock] = useState("")
     const [stockDaily, setStockDaily] = useState("")
     const [stockIntraDay, setStockIntraDay] = useState("")
+    const [portfolioShares, setPortfolioShares] = useState([])
 
     // useEffect( () => {
 
@@ -21,11 +23,17 @@ const MainContainer = () => {
     // //     .then(stocks => getStocks(stocks))
     // // }, [])
 
+    useEffect(() => {
+        PortfolioService.getPortfolioShares()
+            .then(portfolioShares => setPortfolioShares(portfolioShares))
+    }, []);
+
 
     return (
         <div className="maincontainer">
             <h1>This is main container</h1>
             <ShareBox />
+            <PortfolioList portfolioShares={portfolioShares} />
         </div>
     )
 };

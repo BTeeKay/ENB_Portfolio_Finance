@@ -14,6 +14,6 @@ const PortfolioListItem = ({ share }) => {
             </ul>
         </div>
     )
-}
+};
 
 export default PortfolioListItem;
