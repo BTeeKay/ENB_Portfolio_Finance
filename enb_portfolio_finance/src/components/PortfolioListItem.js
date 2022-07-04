@@ -8,10 +8,10 @@ const PortfolioListItem = ({ share }) => {
 
     return (
         <div className="portfolio-share">
-            <h2>{share["Meta Data"]["2. Symbol"]}</h2>
+            <h2>{share.symbol}</h2>
             <ul>
-                <li>Units Held: {share["Meta Data"]["8. Units Held"]}</li>
-                <li>Bought Price: {share["Meta Data"]["6. Purchased Price"]}</li>
+                <li>Units Held: {share["Units Held"]}</li>
+                <li>Bought Price: {share["Purchased Price"]}</li>
                 <li>Current Price Goes Here</li>
                 <li>Total Value Goes Here</li>
             </ul>
