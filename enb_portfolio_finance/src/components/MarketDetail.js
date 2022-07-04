@@ -6,7 +6,7 @@ const MarketDetail = ({stock}) => {
 
     return (
         <>
-        <div class="stock detail">
+        <div className="stock detail">
             <h2>{stock["companyName"]}</h2>
             <p>{stock["symbol"]}</p>
             <ul>
