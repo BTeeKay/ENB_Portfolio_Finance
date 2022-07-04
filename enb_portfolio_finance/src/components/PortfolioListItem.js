@@ -3,7 +3,8 @@ import { useContext } from 'react';
 import { VisibilityContext } from "react-horizontal-scrolling-menu";
 
 const PortfolioListItem = ({ share }) => {
-    // const visibility = useContext(VisibilityContext);
+
+    const totalValue = share["Units Held"] * share["Purchased Price"];
 
 
     return (
@@ -13,7 +14,7 @@ const PortfolioListItem = ({ share }) => {
                 <li>Units Held: {share["Units Held"]}</li>
                 <li>Bought Price: {share["Purchased Price"]}</li>
                 <li>Current Price Goes Here</li>
-                <li>Total Value Goes Here</li>
+                <li>$ {totalValue}</li>
             </ul>
         </div>
     )
