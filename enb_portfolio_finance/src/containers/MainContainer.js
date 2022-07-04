@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ShareBox from '../components/ShareBox';
 import PortfolioList from '../components/PortfolioList';
 import PortfolioService from '../services/PortfolioService';
 import ChartBox from '../components/ChartBox';
@@ -11,22 +10,24 @@ const MainContainer = () => {
     const shares_api = process.env.alphavantage_API
     const API_KEY = process.env.REACT_APP_API_KEY
 
-    const [stockDaily, setStockDaily] = useState("")
-    const [marketShare, setMarketShare] = useState("")
+
+    const [stockDaily, setStockDaily] = useState(null)
+    const [marketShare, getMarketShare] = useState("")
     const [portfolioShares, setPortfolioShares] = useState([])
     const [watchList, setWatchList] = useState([])
 
-    // const getStockHistory = () => {
-    //     fetch( `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stock}&outputsize=full&apikey=${shares_api}`)
-    //     .then(res => res.json())
-    //     .then( stockDaily => setStockDaily(stockDaily))
-    // }
+
+    const getStockHistory = (stock) => {
+        fetch( `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stock}&outputsize=compact&apikey=${shares_api}`)
+        .then(res => res.json())
+        .then( stockDaily => setStockDaily(stockDaily['Time Series (Daily)']))
+    }
 
     const stockNameFromSearch = (s) => {
         setMarketShare(s);
     };
 
-    const getStockData =(stock) => {
+    const getStockData = (stock) => {
         fetch(`https://cloud.iexapis.com/stable/stock/${stock}/quote?token=${API_KEY}`)
         .then(result => result.json())
         .then(marketShare => setMarketShare(marketShare))
@@ -57,7 +58,7 @@ const MainContainer = () => {
             <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWl={addToWl}/>
             <WatchList watchList={watchList} onWlClick={onWlClick}/>
             <PortfolioList portfolioShares={portfolioShares} />
-            <ChartBox />
+            <ChartBox getStockHistory={getStockHistory} stockDaily={stockDaily}/>
         </div>
     )
 };
