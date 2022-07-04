@@ -39,20 +39,21 @@ const MainContainer = () => {
             .then(portfolioShares => setPortfolioShares(portfolioShares))
     }, []);
 
-    const addToWl = function () {
-        const copyWatchList = [...watchList]
-        copyWatchList.push(marketShare)
-        setWatchList(copyWatchList);
+    const onWlClick = function(share){
+        setMarketShare(share);
     }
 
-    const onWlClick = function (share) {
-        setMarketShare(share);
+    const addToWl = function(){
+        const copyWatchList = [...watchList, marketShare]
+        setWatchList(copyWatchList);
     }
 
     const addShareToPortfolio = (share) => {
         PortfolioService.addPortfolioShares(share)
             .then(savedShare => setPortfolioShares([...portfolioShares, savedShare]));
     }
+
+
 
 
     return (

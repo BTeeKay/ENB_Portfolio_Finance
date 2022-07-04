@@ -1,7 +1,9 @@
 import React from 'react';
 import MarketDetail from './MarketDetail';
 
-const MarketBox = ({ marketShare, stockNameFromSearch, getStockData, addShareToPortfolio }) => {
+
+const MarketBox = ({ marketShare, stockNameFromSearch, getStockData, addToWl, addShareToPortfolio }) => {
+
 
     const handleChange = (event) => {
         const inputText = event.target.value
@@ -13,6 +15,7 @@ const MarketBox = ({ marketShare, stockNameFromSearch, getStockData, addShareToP
 
     return (
         <>
+
             <h2> Market Shares</h2>
             <div>
                 <h4>Search a stock</h4>
@@ -22,7 +25,8 @@ const MarketBox = ({ marketShare, stockNameFromSearch, getStockData, addShareToP
                         type="text"></input>
                 </form>
             </div>
-            <MarketDetail stock={marketShare} addShareToPortfolio={addShareToPortfolio} />
+            <MarketDetail stock={marketShare} addToWl={addToWl} addShareToPortfolio={addShareToPortfolio} />
+
         </>
 
     )
