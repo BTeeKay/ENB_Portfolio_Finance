@@ -1,12 +1,14 @@
 import React from 'react';
 import ChartItem from './ChartItem';
 
-const ChartBox = ({getStockHistory, stockDaily}) => {
+const ChartBox = ({getStockHistory, stockDaily, setStockName, stockName}) => {
+
 
     const handleChange = (event) => {
         const inputText = event.target.value
         if (inputText.length === 3 || inputText.length === 4) {
             getStockHistory(inputText)
+            setStockName(inputText)
         };
     }
 
@@ -18,7 +20,7 @@ const ChartBox = ({getStockHistory, stockDaily}) => {
                 onChange={handleChange} placeholder="Enter 4 character symbol"
                 type="text"></input>
             </form>
-            <ChartItem stockDaily={stockDaily}/>
+            <ChartItem stockDaily={stockDaily} stock={stockName}/>
         </div>
     )
 };

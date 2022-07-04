@@ -15,7 +15,7 @@ const MainContainer = () => {
     const [marketShare, setMarketShare] = useState("")
     const [portfolioShares, setPortfolioShares] = useState([])
     const [watchList, setWatchList] = useState([])
-
+    const [stockName, setStockName] = useState("")
 
     const getStockHistory = (stock) => {
         fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stock}&outputsize=compact&apikey=${shares_api}`)
@@ -63,7 +63,7 @@ const MainContainer = () => {
             <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWl={addToWl} addShareToPortfolio={addShareToPortfolio} />
             <WatchList watchList={watchList} onWlClick={onWlClick} />
             <PortfolioList portfolioShares={portfolioShares} />
-            <ChartBox getStockHistory={getStockHistory} stockDaily={stockDaily} />
+            <ChartBox getStockHistory={getStockHistory} stockDaily={stockDaily} stockName={stockName} setStockName={setStockName}/>
         </div>
     )
 };
