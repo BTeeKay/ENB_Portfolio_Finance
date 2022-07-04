@@ -47,3 +47,8 @@ db.shares.insertMany([
 
     },
 ])
+
+db.shares.insertMany({
+    "name": "Bobbin",
+    "cash": 10000
+})
