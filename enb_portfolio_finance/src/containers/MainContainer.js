@@ -48,6 +48,11 @@ const MainContainer = () => {
         setWatchList(copyWatchList);
     }
 
+    const addShareToPortfolio = (share) => {
+        PortfolioService.addPortfolioShares(share)
+            .then(savedShare => setPortfolioShares([...portfolioShares, savedShare]));
+    }
+
 
 
 
@@ -55,7 +60,7 @@ const MainContainer = () => {
         <div className="maincontainer">
             <h1>This is main container</h1>
             {/* getStockHistory={getStockHistory} */}
-            <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWl={addToWl} />
+            <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWl={addToWl} addShareToPortfolio={addShareToPortfolio} />
             <WatchList watchList={watchList} onWlClick={onWlClick} />
             <PortfolioList portfolioShares={portfolioShares} />
             <ChartBox getStockHistory={getStockHistory} stockDaily={stockDaily} />

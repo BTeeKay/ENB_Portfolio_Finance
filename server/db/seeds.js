@@ -3,51 +3,47 @@ db.dropDatabase();
 
 db.shares.insertMany([
     {
-        "Meta Data": {
-            "1. Information": "Price at purchase",
-            "2. Symbol": "TSCO.LON",
-            "3. Last Refreshed": "2022-06-30",
-            "4. Output Size": "Full size",
-            "5. Time Zone": "US/Eastern",
-            "6. Purchased Price": "266.520",
-            "7. Purchased Date": "2022-03-07",
-            "8. Units Held": "2500"
-        }
+        "companyName": "Electronic Arts",
+        "symbol": "EA",
+        "currency": "USD",
+        "high": "123.02",
+        "low": "120.71",
+        "Purchased Price": "126.18",
+        "Purchased Date": "2022-03-07",
+        "Units Held": "2500"
+
     },
     {
-        "Meta Data": {
-            "1. Information": "Price at purchase",
-            "2. Symbol": "BARC.LON",
-            "3. Last Refreshed": "2022-06-30",
-            "4. Output Size": "Full size",
-            "5. Time Zone": "US/Eastern",
-            "6. Purchased Price": "159.700",
-            "7. Purchased Date": "2022-03-04",
-            "8. Units Held": "2000"
-        }
+        "companyName": "Alphabet Inc",
+        "symbol": "GOOG",
+        "currency": "USD",
+        "high": "2196.13",
+        "low": "2142.10",
+        "Purchased Price": "2597.30",
+        "Purchased Date": "2022-03-07",
+        "Units Held": "2500"
+
     },
     {
-        "Meta Data": {
-            "1. Information": "Price at purchase",
-            "2. Symbol": "RR.LON",
-            "3. Last Refreshed": "2022-06-30",
-            "4. Output Size": "Full size",
-            "5. Time Zone": "US/Eastern",
-            "6. Purchased Price": "80.810",
-            "7. Purchased Date": "2022-03-04",
-            "8. Units Held": "3000"
-        }
+        "companyName": "Amazon",
+        "symbol": "AMZN",
+        "currency": "USD",
+        "high": "109.75",
+        "low": "105.85",
+        "Purchased Price": "141.40",
+        "Purchased Date": "2022-03-07",
+        "Units Held": "2500"
+
     },
     {
-        "Meta Data": {
-            "1. Information": "Price at purchase",
-            "2. Symbol": "SHEL.LON",
-            "3. Last Refreshed": "2022-06-30",
-            "4. Output Size": "Full size",
-            "5. Time Zone": "US/Eastern",
-            "6. Purchased Price": "1915.200",
-            "7. Purchased Date": "2022-03-04",
-            "8. Units Held": "900"
-        }
+        "companyName": "Ebay",
+        "symbol": "EBAY",
+        "currency": "USD",
+        "high": "43.04",
+        "low": "41.76",
+        "Purchased Price": "55.80",
+        "Purchased Date": "2022-03-07",
+        "Units Held": "2500"
+
     },
 ])
