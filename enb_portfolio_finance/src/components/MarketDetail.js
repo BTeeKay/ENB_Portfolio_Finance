@@ -21,8 +21,6 @@ const MarketDetail = ({ stock, addToWl, addShareToPortfolio }) => {
                 <p>
                     Primary Exchange: {stock["primaryExchange"]}
                 </p>
-            </div>
-            <div>
                 <input type='submit' value='Add to Watch List' onClick={addToWl} />
                 <input type='submit' value='Add to Portfolio' onClick={addShareToPortfolio} />
             </div>

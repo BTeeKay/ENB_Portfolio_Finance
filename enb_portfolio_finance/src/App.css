@@ -3,16 +3,22 @@
 }
 
 .marketbox {
-  border-radius: 15px;
+  border-radius: 15px 15px 0px 0px;
   width: 50%;
   background-color: #000;
   color: rgb(212, 246, 212);
 
 }
 
+/* .marketbox-watchlist {
+  display: flex;
+} */
+
 .stock-detail {
+  margin-top: 0cm;
+  padding-top: 5px;
   width: 50%;
-  border-radius: 15px;
+  border-radius: 0px 0px 15px 15px;
   background-color: #000;
   color: rgb(212, 246, 212);
 }
