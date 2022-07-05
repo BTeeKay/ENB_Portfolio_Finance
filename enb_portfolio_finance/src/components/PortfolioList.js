@@ -2,13 +2,14 @@ import React, { useState, useContext } from 'react';
 import PortfolioListItem from "./PortfolioListItem";
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 
-const PortfolioList = ({ portfolioShares }) => {
+const PortfolioList = ({ portfolioShares, onClick }) => {
 
     const [selected, setSelected] = useState([]);
     const [position, setPosition] = useState(0);
 
     const portfolioNodes = portfolioShares.map(share => {
-        return <PortfolioListItem
+        return <PortfolioListItem 
+            onClick={onClick} 
             itemId={share._id}
             key={share._id}
             share={share}
