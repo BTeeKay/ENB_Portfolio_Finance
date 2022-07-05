@@ -47,22 +47,22 @@ const MainContainer = () => {
         setMarketShare(share);
     }
 
-    const addToWl = function () {
+    const addToWatchList = function () {
         const copyWatchList = [...watchList, marketShare]
         setWatchList(copyWatchList);
     }
 
     const addShareToPortfolio = (share) => {
-        console.log(share)
-        PortfolioService.addPortfolioShares(share)
-            .then(savedShare => setPortfolioShares([...portfolioShares, savedShare]));
+        const copyPortfoliList = [...portfolioShares, marketShare]
+        setPortfolioShares(copyPortfoliList);
+        PortfolioService.addPortfolioShares(marketShare)
     }
 
     return (
         <div className="maincontainer">
             <Header users={users} />
             <div className='market-box-watchlist'>
-            <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWl={addToWl} addShareToPortfolio={addShareToPortfolio} />
+            <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWatchList={addToWatchList} addShareToPortfolio={addShareToPortfolio} />
             <WatchList watchList={watchList} onClick={onClick} />
             </div>
             <PortfolioList portfolioShares={portfolioShares} onClick={onClick}/>
