@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MarketDetail = ({ stock, addToWl, addShareToPortfolio }) => {
+const MarketDetail = ({ stock, addToWatchList, addShareToPortfolio }) => {
 
 
 
@@ -21,7 +21,7 @@ const MarketDetail = ({ stock, addToWl, addShareToPortfolio }) => {
                 <p>
                     Primary Exchange: {stock["primaryExchange"]}
                 </p>
-                <input type='submit' value='Add to Watch List' onClick={addToWl} />
+                <input type='submit' value='Add to Watch List' onClick={addToWatchList} />
                 <input type='submit' value='Add to Portfolio' onClick={addShareToPortfolio} />
             </div>
         </>
