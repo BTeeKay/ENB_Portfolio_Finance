@@ -13,19 +13,18 @@ const MainContainer = () => {
     const shares_api = process.env.alphavantage_API
     const API_KEY = process.env.REACT_APP_API_KEY
 
-
+    const [users, setUsers] = useState([])
+    const [portfolioShares, setPortfolioShares] = useState([])
     const [stockDaily, setStockDaily] = useState(null)
     const [marketShare, setMarketShare] = useState("")
-    const [portfolioShares, setPortfolioShares] = useState([])
     const [watchList, setWatchList] = useState([])
     const [stockName, setStockName] = useState("")
-    const [user, setUser] = useState([])
 
     useEffect(() => {
         PortfolioService.getPortfolioShares()
             .then(portfolioShares => setPortfolioShares(portfolioShares))
         UsersService.getUser()
-            .then(user => setUser(user))
+            .then(users => setUsers(users))
     }, []);
 
     const getStockHistory = (stock) => {
@@ -64,7 +63,7 @@ const MainContainer = () => {
 
     return (
         <div className="maincontainer">
-            <Header user={user} />
+            <Header users={users} />
             <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWl={addToWl} addShareToPortfolio={addShareToPortfolio} />
             <WatchList watchList={watchList} onWlClick={onWlClick} />
             <PortfolioList portfolioShares={portfolioShares} />

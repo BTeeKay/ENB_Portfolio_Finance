@@ -7,10 +7,10 @@ const UsersService = {
             .then(res => res.json());
     },
 
-    addUser(share) {
+    addUser(user) {
         return fetch(baseURL, {
             method: 'POST',
-            body: JSON.stringify(share),
+            body: JSON.stringify(user),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -18,10 +18,10 @@ const UsersService = {
             .then(res => res.json());
     },
 
-    updateUser(share) {
-        return fetch(baseURL + share._id, {
+    updateUser(user) {
+        return fetch(baseURL + user._id, {
             method: 'PUT',
-            body: JSON.stringify(share),
+            body: JSON.stringify(user),
             headers: {
                 'Content-type': 'application/json'
             }
