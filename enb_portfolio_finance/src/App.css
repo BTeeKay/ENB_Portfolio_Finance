@@ -1,3 +1,57 @@
 .App {
   text-align: center;
 }
+
+.marketbox {
+  border-radius: 15px;
+  width: 50%;
+  background-color: #000;
+  color: rgb(212, 246, 212);
+
+}
+
+.stock-detail {
+  width: 50%;
+  border-radius: 15px;
+  background-color: #000;
+  color: rgb(212, 246, 212);
+}
+
+.stock-detail>ul>li {
+  list-style: none;
+}
+
+.portfolio {
+  border-radius: 15px;
+  background-color: #000;
+  color: rgb(212, 246, 212);
+}
+
+.portfolio-share {
+  border-radius: 15px;
+  background-color: #000;
+  color: rgb(212, 246, 212);
+}
+
+.portfolio-share>ul>li {
+  list-style-type: none;
+}
+
+
+.watch-list {
+  width: 50%;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: #000;
+  color: rgb(212, 246, 212);
+}
+
+.watch-list>ul>li {
+  list-style: none;
+}
+
+.chartbox {
+  border-radius: 15px;
+  background-color: #000;
+  color: rgb(212, 246, 212);
+}
