@@ -41,11 +41,7 @@ db.shares.insertMany([
         "currency": "USD",
         "high": "43.04",
         "low": "41.76",
-<<<<<<< HEAD
         "latestPrice": "55.80",
-=======
-        "Purchased Price": "55.80",
->>>>>>> 640314a78bf60ae519ba56beaf51b04335e13276
         "Purchased Date": "2022-03-07",
         "Units Held": "2500"
 
