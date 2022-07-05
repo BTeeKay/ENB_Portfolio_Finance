@@ -11,7 +11,7 @@ const WatchList = ({ watchList, onWlClick }) => {
     return (
         <>
             <div className='watch-list'>
-                <h4>Watch List:</h4>
+                <h2>Watch List:</h2>
 
                 <ul>
                     {watchingList}

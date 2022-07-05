@@ -64,8 +64,10 @@ const MainContainer = () => {
     return (
         <div className="maincontainer">
             <Header users={users} />
-            <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWl={addToWl} addShareToPortfolio={addShareToPortfolio} />
-            <WatchList watchList={watchList} onWlClick={onWlClick} />
+            <div className='market-box-watchlist'>
+                <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWl={addToWl} addShareToPortfolio={addShareToPortfolio} />
+                <WatchList watchList={watchList} onWlClick={onWlClick} />
+            </div>
             <PortfolioList portfolioShares={portfolioShares} />
             <ChartBox getStockHistory={getStockHistory} stockDaily={stockDaily} stockName={stockName} setStockName={setStockName} />
         </div>
