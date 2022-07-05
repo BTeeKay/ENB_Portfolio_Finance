@@ -10,7 +10,7 @@ db.shares.insertMany([
         "low": "120.71",
         "latestPrice": "126.18",
         "Purchased Date": "2022-03-07",
-        "Units Held": "2500"
+        "Units Held": "5"
 
     },
     {
@@ -21,7 +21,7 @@ db.shares.insertMany([
         "low": "2142.10",
         "latestPrice": "2597.30",
         "Purchased Date": "2022-03-07",
-        "Units Held": "2500"
+        "Units Held": "5"
 
     },
     {
@@ -32,7 +32,7 @@ db.shares.insertMany([
         "low": "105.85",
         "latestPrice": "141.40",
         "Purchased Date": "2022-03-07",
-        "Units Held": "2500"
+        "Units Held": "5"
 
     },
     {
@@ -43,7 +43,7 @@ db.shares.insertMany([
         "low": "41.76",
         "latestPrice": "55.80",
         "Purchased Date": "2022-03-07",
-        "Units Held": "2500"
+        "Units Held": "5"
 
     },
 ])

@@ -6,6 +6,7 @@ import UsersService from '../services/UsersService';
 import ChartBox from '../components/ChartBox';
 import MarketBox from '../components/MarketBox';
 import WatchList from '../components/WatchList';
+import './maincontainer.css'
 
 
 const MainContainer = () => {
@@ -19,12 +20,14 @@ const MainContainer = () => {
     const [marketShare, setMarketShare] = useState("")
     const [watchList, setWatchList] = useState([])
     const [stockName, setStockName] = useState("")
+    const [totalValue, setTotalValue] = useState(null)
 
     useEffect(() => {
         PortfolioService.getPortfolioShares()
             .then(portfolioShares => setPortfolioShares(portfolioShares))
         UsersService.getUser()
             .then(users => setUsers(users))
+        getTotalValue()
     }, []);
 
     const getStockHistory = (stock) => {
@@ -58,8 +61,19 @@ const MainContainer = () => {
         PortfolioService.addPortfolioShares(marketShare)
     }
 
+    const getTotalValue =  () => {
+        let total = 0
+        portfolioShares.map(share => {
+                total += share.currentPrice
+                console.log(share.currentPrice)
+                console.log(total)
+            })
+        setTotalValue(total)
+    }
+
     return (
         <div className="maincontainer">
+            <h1>PLEASE LET THIS SHOW TOTAL {totalValue}</h1>
             <Header users={users} />
             <div className='market-box-watchlist'>
                 <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWatchList={addToWatchList} addShareToPortfolio={addShareToPortfolio} />

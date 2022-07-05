@@ -1,14 +1,27 @@
-import React from "react";
-import { useContext } from 'react';
-import { VisibilityContext } from "react-horizontal-scrolling-menu";
+import React, {useEffect, useState} from "react";
 
-const PortfolioListItem = ({ share, onClick }) => {
 
-    const totalValue = share["Units Held"] * share.latestPrice;
+const PortfolioListItem = ({ share, onClick, }) => {
+
+
+    const API_KEY = process.env.REACT_APP_API_KEY
+
+    const [currentPrice, setCurrentPrice] = useState("");
+
+    fetch(`https://cloud.iexapis.com/stable/stock/${share.symbol}/quote?token=${API_KEY}`)
+            .then(result => result.json())
+            .then(price => setCurrentPrice(price["latestPrice"]))
+            share.currentPrice = currentPrice
+
+    const totalBoughtValue = share["Units Held"] * share.latestPrice;
+
+    const totalCurrentPrice = share["Units Held"] * share.currentPrice;
+
 
     const handleClick = () => {
         onClick(share)
     }
+
 
     return (
         <div className="portfolio-share">
@@ -16,8 +29,9 @@ const PortfolioListItem = ({ share, onClick }) => {
             <ul>
                 <li>Units Held: {share["Units Held"]}</li>
                 <li>Bought Price: {share.latestPrice}</li>
-                <li>Current Price Goes Here</li>
-                <li>$ {totalValue}</li>
+                <li>Current Price: {share.currentPrice}</li>
+                <li>Total Price When Bought: {totalBoughtValue}</li>
+                <li>Total Current Price: {totalCurrentPrice}</li>
             </ul>
         </div>
     )
