@@ -1,9 +1,9 @@
 import React from "react";
 
-const WatchListItem = ({ share, onWlClick }) => {
+const WatchListItem = ({ share, onClick }) => {
 
     const handleClick = () => {
-        onWlClick(share)
+        onClick(share)
     }
 
     return (

@@ -14,7 +14,10 @@
   display: flex;
 }
 
+
+
 .stock-detail {
+  display: center;
   margin-top: 0cm;
   padding-top: 5px;
   width: 50%;
@@ -51,6 +54,7 @@
   background-color: #000;
   color: rgb(212, 246, 212);
 }
+
 
 .portfolio-share {
   background-color: #000;
