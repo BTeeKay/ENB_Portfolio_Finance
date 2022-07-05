@@ -23,12 +23,10 @@ const MarketBox = ({ marketShare, stockNameFromSearch, getStockData, addToWl, ad
                     <input maxLength="4" className="searchShares"
                         onChange={handleChange} placeholder="Enter stock symbol"
                         type="text"></input>
-                </form> 
-                <MarketDetail stock={marketShare} addToWl={addToWl} addShareToPortfolio={addShareToPortfolio} /> 
-                </div>
-
+                </form>
+            </div>
+            <MarketDetail stock={marketShare} addToWl={addToWl} addShareToPortfolio={addShareToPortfolio} />
         </>
-
     )
 }
 

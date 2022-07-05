@@ -3,16 +3,16 @@
 }
 
 .marketbox {
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 15px 15px 15px 15px;
   width: 50%;
   background-color: #000;
   color: rgb(212, 246, 212);
 
 }
 
-/* .marketbox-watchlist {
+.market-box-watchlist {
   display: flex;
-} */
+}
 
 
 
@@ -21,7 +21,7 @@
   margin-top: 0cm;
   padding-top: 5px;
   width: 50%;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 15px 15px 15px 15px;
   background-color: #000;
   color: rgb(212, 246, 212);
 }
@@ -34,16 +34,6 @@
   border-radius: 15px;
   background-color: #000;
   color: rgb(212, 246, 212);
-}
-
-.portfolio-share {
-  border-radius: 15px;
-  background-color: #000;
-  color: rgb(212, 246, 212);
-}
-
-.portfolio-share>ul>li {
-  list-style-type: none;
 }
 
 
@@ -66,6 +56,25 @@
 }
 
 
-.chartbox.watch-list {
+.portfolio-share {
+  background-color: #000;
+  overflow: auto;
+  white-space: nowrap;
 
+}
+
+.portfolio-share {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.portfolio-share:hover {
+  background-color: #777;
+}
+
+.portfolio-share ul li {
+  list-style-type: none;
 }

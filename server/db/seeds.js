@@ -46,6 +46,50 @@ db.shares.insertMany([
         "Units Held": "2500"
 
     },
+    {
+        "companyName": "Ebay",
+        "symbol": "EBAY",
+        "currency": "USD",
+        "high": "43.04",
+        "low": "41.76",
+        "Purchased Price": "55.80",
+        "Purchased Date": "2022-03-07",
+        "Units Held": "2500"
+
+    },
+    {
+        "companyName": "Ebay",
+        "symbol": "EBAY",
+        "currency": "USD",
+        "high": "43.04",
+        "low": "41.76",
+        "Purchased Price": "55.80",
+        "Purchased Date": "2022-03-07",
+        "Units Held": "2500"
+
+    },
+    {
+        "companyName": "Ebay",
+        "symbol": "EBAY",
+        "currency": "USD",
+        "high": "43.04",
+        "low": "41.76",
+        "Purchased Price": "55.80",
+        "Purchased Date": "2022-03-07",
+        "Units Held": "2500"
+
+    },
+    {
+        "companyName": "Ebay",
+        "symbol": "EBAY",
+        "currency": "USD",
+        "high": "43.04",
+        "low": "41.76",
+        "Purchased Price": "55.80",
+        "Purchased Date": "2022-03-07",
+        "Units Held": "2500"
+
+    },
 ])
 
 db.users.insertMany([

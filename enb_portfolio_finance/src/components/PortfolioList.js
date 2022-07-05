@@ -50,10 +50,10 @@ const PortfolioList = ({ portfolioShares, onClick }) => {
 
     return (
         <div className='portfolio'>
-            <h3>Portfolio</h3>
-            <ScrollMenu>
+            <h2>Portfolio</h2>
+            <div className='scrollmenu'>
                 {portfolioNodes}
-            </ScrollMenu>
+            </div>
         </div>
     )
 };

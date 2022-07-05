@@ -58,13 +58,10 @@ const MainContainer = () => {
             .then(savedShare => setPortfolioShares([...portfolioShares, savedShare]));
     }
 
-
-
-
     return (
         <div className="maincontainer">
             <Header users={users} />
-            <div>
+            <div className='market-box-watchlist'>
             <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWl={addToWl} addShareToPortfolio={addShareToPortfolio} />
             <WatchList watchList={watchList} onClick={onClick} />
             </div>
