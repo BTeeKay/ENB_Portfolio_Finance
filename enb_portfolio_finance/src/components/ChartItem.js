@@ -53,7 +53,7 @@ const ChartItem = ({ stockDaily, stock }) => {
     console.log(ohlc);
 
     return (
-        <div className="chart_item">
+        <div className="chart-item">
             <HighchartsReact highcharts={Highcharts} constructorType={'stockChart'} options={options}
             />
         </div>

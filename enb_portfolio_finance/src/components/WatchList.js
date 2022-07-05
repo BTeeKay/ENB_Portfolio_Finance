@@ -10,7 +10,7 @@ const WatchList = ({ watchList, onWlClick }) => {
 
     return (
         <>
-            <div className='watch_list'>
+            <div className='watch-list'>
                 <h4>Watch List:</h4>
 
                 <ul>
