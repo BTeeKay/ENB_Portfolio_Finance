@@ -3,6 +3,6 @@ header {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(#000, #333);
+    background-color: #000;
     color: rgb(212, 246, 212);
 }

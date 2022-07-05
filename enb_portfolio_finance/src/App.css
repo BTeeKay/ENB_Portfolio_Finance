@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #000;
 }
 
 .marketbox {
@@ -57,6 +58,7 @@
 
 
 .portfolio-share {
+  color: rgb(212, 246, 212);
   background-color: #000;
   overflow: auto;
   white-space: nowrap;
@@ -65,7 +67,7 @@
 
 .portfolio-share {
   display: inline-block;
-  color: white;
+  color: rgb(212, 246, 212);
   text-align: center;
   padding: 14px;
   text-decoration: none;
@@ -76,5 +78,6 @@
 }
 
 .portfolio-share ul li {
+  color: rgb(212, 246, 212);
   list-style-type: none;
 }
