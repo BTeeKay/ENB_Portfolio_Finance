@@ -8,7 +8,7 @@ const PortfolioListItem = ({ share }) => {
 
 
     return (
-        <div className="portfolio-share">
+        <div className="portfolio_share">
             <h2>{share.symbol}</h2>
             <ul>
                 <li>Units Held: {share["Units Held"]}</li>

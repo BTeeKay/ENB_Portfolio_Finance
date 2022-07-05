@@ -15,9 +15,9 @@ const MarketBox = ({ marketShare, stockNameFromSearch, getStockData, addToWl, ad
 
     return (
         <>
+            <div className='marketbox'>
+                <h2> Market Shares</h2>
 
-            <h2> Market Shares</h2>
-            <div>
                 <h4>Search a stock</h4>
                 <form>
                     <input maxLength="4" className="searchShares"

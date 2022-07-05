@@ -48,7 +48,7 @@ db.shares.insertMany([
     },
 ])
 
-db.shares.insertMany({
+db.users.insertOne({
     "name": "Bobbin",
     "cash": 10000
 })
