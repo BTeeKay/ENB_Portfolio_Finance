@@ -2,10 +2,10 @@ import React from 'react';
 import WatchListItem from './WatchListItem';
 
 
-const WatchList = ({ watchList, onWlClick }) => {
+const WatchList = ({ watchList, onClick }) => {
 
     const watchingList = watchList.map((wshare, index) => {
-        return <WatchListItem share={wshare} key={index} onWlClick={onWlClick} />
+        return <WatchListItem share={wshare} key={index} onClick={onClick} />
     })
 
     return (
