@@ -8,7 +8,7 @@ db.shares.insertMany([
         "currency": "USD",
         "high": "123.02",
         "low": "120.71",
-        "Purchased Price": "126.18",
+        "latestPrice": "126.18",
         "Purchased Date": "2022-03-07",
         "Units Held": "2500"
 
@@ -19,7 +19,7 @@ db.shares.insertMany([
         "currency": "USD",
         "high": "2196.13",
         "low": "2142.10",
-        "Purchased Price": "2597.30",
+        "latestPrice": "2597.30",
         "Purchased Date": "2022-03-07",
         "Units Held": "2500"
 
@@ -30,7 +30,7 @@ db.shares.insertMany([
         "currency": "USD",
         "high": "109.75",
         "low": "105.85",
-        "Purchased Price": "141.40",
+        "latestPrice": "141.40",
         "Purchased Date": "2022-03-07",
         "Units Held": "2500"
 
@@ -41,51 +41,7 @@ db.shares.insertMany([
         "currency": "USD",
         "high": "43.04",
         "low": "41.76",
-        "Purchased Price": "55.80",
-        "Purchased Date": "2022-03-07",
-        "Units Held": "2500"
-
-    },
-    {
-        "companyName": "Ebay",
-        "symbol": "EBAY",
-        "currency": "USD",
-        "high": "43.04",
-        "low": "41.76",
-        "Purchased Price": "55.80",
-        "Purchased Date": "2022-03-07",
-        "Units Held": "2500"
-
-    },
-    {
-        "companyName": "Ebay",
-        "symbol": "EBAY",
-        "currency": "USD",
-        "high": "43.04",
-        "low": "41.76",
-        "Purchased Price": "55.80",
-        "Purchased Date": "2022-03-07",
-        "Units Held": "2500"
-
-    },
-    {
-        "companyName": "Ebay",
-        "symbol": "EBAY",
-        "currency": "USD",
-        "high": "43.04",
-        "low": "41.76",
-        "Purchased Price": "55.80",
-        "Purchased Date": "2022-03-07",
-        "Units Held": "2500"
-
-    },
-    {
-        "companyName": "Ebay",
-        "symbol": "EBAY",
-        "currency": "USD",
-        "high": "43.04",
-        "low": "41.76",
-        "Purchased Price": "55.80",
+        "latestPrice": "55.80",
         "Purchased Date": "2022-03-07",
         "Units Held": "2500"
 

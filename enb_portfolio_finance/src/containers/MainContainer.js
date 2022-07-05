@@ -62,10 +62,10 @@ const MainContainer = () => {
         <div className="maincontainer">
             <Header users={users} />
             <div className='market-box-watchlist'>
-            <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWatchList={addToWatchList} addShareToPortfolio={addShareToPortfolio} />
-            <WatchList watchList={watchList} onClick={onClick} />
+                <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWatchList={addToWatchList} addShareToPortfolio={addShareToPortfolio} />
+                <WatchList watchList={watchList} onClick={onClick} />
             </div>
-            <PortfolioList portfolioShares={portfolioShares} onClick={onClick}/>
+            <PortfolioList portfolioShares={portfolioShares} onClick={onClick} />
             <ChartBox getStockHistory={getStockHistory} stockDaily={stockDaily} stockName={stockName} setStockName={setStockName} />
         </div>
     )

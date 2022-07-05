@@ -4,7 +4,7 @@ import { VisibilityContext } from "react-horizontal-scrolling-menu";
 
 const PortfolioListItem = ({ share, onClick }) => {
 
-    const totalValue = share["Units Held"] * share["Purchased Price"];
+    const totalValue = share["Units Held"] * share.latestPrice;
 
     const handleClick = () => {
         onClick(share)
@@ -15,7 +15,7 @@ const PortfolioListItem = ({ share, onClick }) => {
             <h2 onClick={handleClick}>{share.symbol}</h2>
             <ul>
                 <li>Units Held: {share["Units Held"]}</li>
-                <li>Bought Price: {share["Purchased Price"]}</li>
+                <li>Bought Price: {share.latestPrice}</li>
                 <li>Current Price Goes Here</li>
                 <li>$ {totalValue}</li>
             </ul>
