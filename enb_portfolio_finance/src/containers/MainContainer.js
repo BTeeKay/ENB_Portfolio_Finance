@@ -62,6 +62,13 @@ const MainContainer = () => {
         PortfolioService.addPortfolioShares(marketShare)
     }
 
+    const sellPortfolioShare = idToDelete => {
+        PortfolioService.deletePortfolioShares(idToDelete)
+            .then(() => {
+                setPortfolioShares(portfolioShares.filter(portfolioShare => portfolioShare._id !== idToDelete))
+            })
+    }
+
     const getTotalValue =  () => {
         let total = 0
         portfolioShares.map(share => {
@@ -80,7 +87,7 @@ const MainContainer = () => {
                 <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWatchList={addToWatchList} addShareToPortfolio={addShareToPortfolio} />
                 <WatchList watchList={watchList} onClick={onClick} />
             </div>
-            <PortfolioList portfolioShares={portfolioShares} onClick={onClick} />
+            <PortfolioList portfolioShares={portfolioShares} onClick={onClick} sellPortfolioShare={sellPortfolioShare}/>
             <ChartBox getStockHistory={getStockHistory} stockDaily={stockDaily} stockName={stockName} setStockName={setStockName} />
         </div>
     )
