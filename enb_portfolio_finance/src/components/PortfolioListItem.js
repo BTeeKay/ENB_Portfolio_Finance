@@ -21,8 +21,8 @@ const PortfolioListItem = ({ share, onClick, sellPortfolioShare }) => {
     const handleClick = () => {
         onClick(share)
     }
-    
-        const handleDeleteClick = () => {
+
+    const handleDeleteClick = () => {
         sellPortfolioShare(share._id)
 
     }
@@ -44,7 +44,7 @@ const PortfolioListItem = ({ share, onClick, sellPortfolioShare }) => {
             </div>
 
         )
-
+    }
 
     return (
         <div className="portfolio-share">
@@ -58,9 +58,9 @@ const PortfolioListItem = ({ share, onClick, sellPortfolioShare }) => {
                     <li>Total Current Price: {totalCurrentPrice}</li>
                 </div>
             </ul>
-            <button 
-                type="button" 
-                className="delete-btn" 
+            <button
+                type="button"
+                className="delete-btn"
                 onClick={handleDeleteClick}
             >Sell All
             </button>
