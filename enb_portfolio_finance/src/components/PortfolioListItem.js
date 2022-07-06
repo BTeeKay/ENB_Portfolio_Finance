@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 
-const PortfolioListItem = ({ share, onClick, }) => {
+const PortfolioListItem = ({ share, onClick, sellPortfolioShare }) => {
 
 
-    const API_KEY = process.env.REACT_APP_API_KEY
+    const API_KEY = process.env.IEX_API_KEY
 
     const [currentPrice, setCurrentPrice] = useState("");
 
@@ -21,6 +21,12 @@ const PortfolioListItem = ({ share, onClick, }) => {
     const handleClick = () => {
         onClick(share)
     }
+    
+        const handleDeleteClick = () => {
+        sellPortfolioShare(share._id)
+
+    }
+
 
     if (totalCurrentPrice >= totalBoughtValue) {
         return (
@@ -38,7 +44,6 @@ const PortfolioListItem = ({ share, onClick, }) => {
             </div>
 
         )
-    }
 
 
     return (
@@ -53,6 +58,12 @@ const PortfolioListItem = ({ share, onClick, }) => {
                     <li>Total Current Price: {totalCurrentPrice}</li>
                 </div>
             </ul>
+            <button 
+                type="button" 
+                className="delete-btn" 
+                onClick={handleDeleteClick}
+            >Sell All
+            </button>
         </div>
     )
 };

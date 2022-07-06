@@ -12,7 +12,7 @@ import './maincontainer.css'
 const MainContainer = () => {
 
     const shares_api = process.env.alphavantage_API
-    const API_KEY = process.env.REACT_APP_API_KEY
+    const API_KEY = process.env.IEX_API_KEY
 
     const [users, setUsers] = useState([])
     const [portfolioShares, setPortfolioShares] = useState([])
@@ -56,10 +56,26 @@ const MainContainer = () => {
     }
 
     const addShareToPortfolio = (share) => {
-        marketShare['Units Held'] = 5
-        const copyPortfoliList = [...portfolioShares, marketShare]
-        setPortfolioShares(copyPortfoliList);
-        PortfolioService.addPortfolioShares(marketShare)
+        
+        marketShare['Units Held'] = 5;
+        let totes = 0;
+        totes = marketShare['Units Held'] * parseFloat(marketShare['latestPrice']);
+        console.log(totes)
+        console.log(users[0].cash)
+        if (users[0].cash > totes) {
+            
+            const copyPortfoliList = [...portfolioShares, marketShare]
+            setPortfolioShares(copyPortfoliList);
+            PortfolioService.addPortfolioShares(marketShare)
+            getTotalValue()
+        };
+    }
+
+    const sellPortfolioShare = id => {
+        PortfolioService.deletePortfolioShares(id)
+            .then(() => {
+                setPortfolioShares(portfolioShares.filter(portfolioShare => portfolioShare._id !== id))
+            })
     }
 
     const getTotalValue =  () => {
@@ -80,7 +96,7 @@ const MainContainer = () => {
                 <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWatchList={addToWatchList} addShareToPortfolio={addShareToPortfolio} />
                 <WatchList watchList={watchList} onClick={onClick} />
             </div>
-            <PortfolioList portfolioShares={portfolioShares} onClick={onClick} />
+            <PortfolioList portfolioShares={portfolioShares} onClick={onClick} sellPortfolioShare={sellPortfolioShare}/>
             <ChartBox getStockHistory={getStockHistory} stockDaily={stockDaily} stockName={stockName} setStockName={setStockName} />
         </div>
     )

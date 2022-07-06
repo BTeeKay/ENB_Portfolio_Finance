@@ -28,10 +28,10 @@ const PortfolioService = {
         })
     },
 
-    deletePortfolioShares(id) {
-        return fetch(baseURL + id, {
+    deletePortfolioShares(share) {
+        return fetch(baseURL + share._id, {
             method: 'DELETE'
-        });
+        })
     }
 };
 
