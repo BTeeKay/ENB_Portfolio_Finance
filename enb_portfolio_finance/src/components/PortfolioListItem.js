@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 
-const PortfolioListItem = ({ share, onClick, }) => {
+const PortfolioListItem = ({ share, onClick, sellPortfolioShare }) => {
 
 
     const API_KEY = process.env.REACT_APP_API_KEY
@@ -22,6 +22,10 @@ const PortfolioListItem = ({ share, onClick, }) => {
         onClick(share)
     }
 
+    const handleDeleteClick = () => {
+        sellPortfolioShare(share._id)
+    }
+
 
     return (
         <div className="portfolio-share">
@@ -33,6 +37,12 @@ const PortfolioListItem = ({ share, onClick, }) => {
                 <li>Total Price When Bought: {totalBoughtValue}</li>
                 <li>Total Current Price: {totalCurrentPrice}</li>
             </ul>
+            <button 
+                type="button" 
+                className="delete-btn" 
+                onClick={handleDeleteClick}
+            >Sell All
+            </button>
         </div>
     )
 };
