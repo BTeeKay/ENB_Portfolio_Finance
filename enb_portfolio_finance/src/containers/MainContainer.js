@@ -60,6 +60,7 @@ const MainContainer = () => {
         const copyPortfoliList = [...portfolioShares, marketShare]
         setPortfolioShares(copyPortfoliList);
         PortfolioService.addPortfolioShares(marketShare)
+        getTotalValue()
     }
 
     const getTotalValue =  () => {
