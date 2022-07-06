@@ -4,5 +4,11 @@ header {
     padding: 0;
     overflow: hidden;
     background-color: #000;
-    color: rgb(212, 246, 212);
+    color: rgb(255, 245, 158);
+
+}
+
+header>h1 {
+    color: rgb(255, 245, 158);
+
 }

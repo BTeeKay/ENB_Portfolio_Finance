@@ -1,14 +1,33 @@
 .App {
   text-align: center;
-  background-color: #000;
+  font-family: "App";
+}
+
+@font-face {
+  font-family: "App";
+  src: url("./fonts/Oxygen-Regular.ttf") format("truetype");
+}
+
+.green {
+  color: greenyellow;
+}
+
+.red {
+  color: red;
 }
 
 .marketbox {
+  border: 10px solid #777;
+  margin: 10px;
   border-radius: 15px 15px 15px 15px;
   width: 50%;
   background-color: #000;
-  color: rgb(212, 246, 212);
+  color: rgb(163, 163, 163);
 
+}
+
+.marketbox>h2 {
+  color: rgb(255, 245, 158);
 }
 
 .market-box-watchlist {
@@ -18,44 +37,68 @@
 
 
 .stock-detail {
+  border: 10px solid #777;
+  margin: 10px;
   display: center;
-  margin-top: 0cm;
   padding-top: 5px;
   width: 50%;
   border-radius: 15px 15px 15px 15px;
   background-color: #000;
-  color: rgb(212, 246, 212);
+  color: rgb(163, 163, 163);
 }
+
+
 
 .stock-detail>ul>li {
   list-style: none;
 }
 
-.portfolio {
-  border-radius: 15px;
-  background-color: #000;
-  color: rgb(212, 246, 212);
+.stock-detail>h2 {
+  color: rgb(255, 245, 158);
 }
 
 
 .watch-list {
+  border: 10px solid #777;
+  margin: 10px;
   width: 50%;
   justify-content: center;
   border-radius: 15px;
   background-color: #000;
-  color: rgb(212, 246, 212);
+  color: rgb(163, 163, 163);
 }
 
 .watch-list>ul>li {
   list-style: none;
 }
 
-.chartbox {
-  border-radius: 15px;
-  background-color: #000;
-  color: rgb(212, 246, 212);
+.watch-list>h2 {
+  color: rgb(255, 245, 158);
 }
 
+.chartbox {
+  border: 10px solid #777;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #000;
+  color: rgb(163, 163, 163);
+}
+
+.chartbox>h3 {
+  color: rgb(255, 245, 158);
+}
+
+.portfolio {
+  border: 10px solid #777;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #000;
+  color: rgb(163, 163, 163);
+}
+
+.portfolio>h2 {
+  color: rgb(255, 245, 158);
+}
 
 .portfolio-share {
   color: rgb(212, 246, 212);
@@ -67,7 +110,7 @@
 
 .portfolio-share {
   display: inline-block;
-  color: rgb(212, 246, 212);
+  color: rgb(163, 163, 163);
   text-align: center;
   padding: 14px;
   text-decoration: none;
@@ -78,6 +121,10 @@
 }
 
 .portfolio-share ul li {
-  color: rgb(212, 246, 212);
+  color: rgb(163, 163, 163);
   list-style-type: none;
+}
+
+.portfolio-share>h2 {
+  color: rgb(255, 245, 158);
 }
