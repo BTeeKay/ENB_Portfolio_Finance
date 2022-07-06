@@ -18,7 +18,6 @@ const PortfolioList = ({ portfolioShares, onClick }) => {
             <h2>Portfolio</h2>
             <div className='scrollmenu'>
                 {portfolioNodes}
-                <h3>Total Portfolio Value: </h3>
             </div>
         </div>
     )

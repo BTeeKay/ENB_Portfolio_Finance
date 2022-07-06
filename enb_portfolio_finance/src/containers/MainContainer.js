@@ -26,8 +26,8 @@ const MainContainer = () => {
         PortfolioService.getPortfolioShares()
             .then(portfolioShares => setPortfolioShares(portfolioShares))
         UsersService.getUser()
-            .then(users => setUsers(users))
-        getTotalValue()
+            .then(users => setUsers(users));
+            getTotalValue();
     }, []);
 
     const getStockHistory = (stock) => {
@@ -56,6 +56,7 @@ const MainContainer = () => {
     }
 
     const addShareToPortfolio = (share) => {
+        marketShare['Units Held'] = 5
         const copyPortfoliList = [...portfolioShares, marketShare]
         setPortfolioShares(copyPortfoliList);
         PortfolioService.addPortfolioShares(marketShare)
@@ -64,12 +65,12 @@ const MainContainer = () => {
     const getTotalValue =  () => {
         let total = 0
         portfolioShares.map(share => {
-                total += share.currentPrice
+                total += (share.currentPrice * share["Units Held"])
                 console.log(share.currentPrice)
                 console.log(total)
             })
         setTotalValue(total)
-    }
+        }
 
     return (
         <div className="maincontainer">
