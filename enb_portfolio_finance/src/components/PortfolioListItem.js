@@ -22,7 +22,7 @@ const PortfolioListItem = ({ share, onClick, }) => {
         onClick(share)
     }
 
-    if (totalCurrentPrice > totalBoughtValue) {
+    if (totalCurrentPrice >= totalBoughtValue) {
         return (
             <div className="portfolio-share">
                 <h2 onClick={handleClick}>{share.symbol}</h2>
@@ -30,12 +30,13 @@ const PortfolioListItem = ({ share, onClick, }) => {
                     <li>Units Held: {share["Units Held"]}</li>
                     <li>Bought Price: {share.latestPrice}</li>
                     <li>Current Price: {share.currentPrice}</li>
-                    <li>Total Price When Bought: {totalBoughtValue}</li>
+                    <li >Total Price When Bought: {totalBoughtValue}</li>
                     <div className="green">
                         <li>Total Current Price: {totalCurrentPrice}</li>
                     </div>
                 </ul>
             </div>
+
         )
     }
 

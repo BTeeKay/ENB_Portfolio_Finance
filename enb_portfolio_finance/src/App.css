@@ -8,13 +8,6 @@
   src: url("./fonts/Oxygen-Regular.ttf") format("truetype");
 }
 
-.green {
-  color: greenyellow;
-}
-
-.red {
-  color: red;
-}
 
 .marketbox {
   border: 10px solid #777;
@@ -101,7 +94,6 @@
 }
 
 .portfolio-share {
-  color: rgb(212, 246, 212);
   background-color: #000;
   overflow: auto;
   white-space: nowrap;
@@ -110,18 +102,25 @@
 
 .portfolio-share {
   display: inline-block;
-  color: rgb(163, 163, 163);
+  /* color: rgb(163, 163, 163); */
   text-align: center;
   padding: 14px;
   text-decoration: none;
 }
 
+.red>li {
+  color: red;
+}
+
+.green>li {
+  color: greenyellow;
+}
+
 .portfolio-share:hover {
-  background-color: #777;
+  background-color: rgb(202, 202, 202);
 }
 
 .portfolio-share ul li {
-  color: rgb(163, 163, 163);
   list-style-type: none;
 }
 
