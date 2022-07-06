@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:9000/api/shares';
+const baseURL = 'http://localhost:9000/api/shares/';
 
 const PortfolioService = {
 
@@ -28,8 +28,8 @@ const PortfolioService = {
         })
     },
 
-    deletePortfolioShares(share) {
-        return fetch(baseURL + share._id, {
+    deletePortfolioShares(id) {
+        return fetch(baseURL + id, {
             method: 'DELETE'
         })
     }
