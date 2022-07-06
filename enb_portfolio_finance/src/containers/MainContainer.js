@@ -12,7 +12,7 @@ import './maincontainer.css'
 const MainContainer = () => {
 
     const shares_api = process.env.alphavantage_API
-    const API_KEY = process.env.REACT_APP_API_KEY
+    const API_KEY = process.env.IEX_API_KEY
 
     const [users, setUsers] = useState([])
     const [portfolioShares, setPortfolioShares] = useState([])
@@ -71,10 +71,10 @@ const MainContainer = () => {
         };
     }
 
-    const sellPortfolioShare = idToDelete => {
-        PortfolioService.deletePortfolioShares(idToDelete)
+    const sellPortfolioShare = id => {
+        PortfolioService.deletePortfolioShares(id)
             .then(() => {
-                setPortfolioShares(portfolioShares.filter(portfolioShare => portfolioShare._id !== idToDelete))
+                setPortfolioShares(portfolioShares.filter(portfolioShare => portfolioShare._id !== id))
             })
     }
 
