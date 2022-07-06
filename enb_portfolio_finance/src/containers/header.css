@@ -1,0 +1,14 @@
+header {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: rgb(255, 245, 158);
+
+}
+
+header>h1 {
+    color: rgb(255, 245, 158);
+
+}
