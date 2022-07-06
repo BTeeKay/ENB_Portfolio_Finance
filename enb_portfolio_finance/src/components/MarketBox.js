@@ -7,7 +7,7 @@ const MarketBox = ({ marketShare, stockNameFromSearch, getStockData, addToWatchL
 
     const handleChange = (event) => {
         const inputText = event.target.value
-        if (inputText.length === 4) {
+        if (inputText.length === 2 || 3 || 4) {
             stockNameFromSearch(inputText)
             getStockData(inputText)
         }

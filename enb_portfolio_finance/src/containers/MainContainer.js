@@ -56,10 +56,19 @@ const MainContainer = () => {
     }
 
     const addShareToPortfolio = (share) => {
-        marketShare['Units Held'] = 5
-        const copyPortfoliList = [...portfolioShares, marketShare]
-        setPortfolioShares(copyPortfoliList);
-        PortfolioService.addPortfolioShares(marketShare)
+        
+        marketShare['Units Held'] = 5;
+        let totes = 0;
+        totes = marketShare['Units Held'] * parseFloat(marketShare['latestPrice']);
+        console.log(totes)
+        console.log(users[0].cash)
+        if (users[0].cash > totes) {
+            
+            const copyPortfoliList = [...portfolioShares, marketShare]
+            setPortfolioShares(copyPortfoliList);
+            PortfolioService.addPortfolioShares(marketShare)
+            getTotalValue()
+        };
     }
 
     const sellPortfolioShare = idToDelete => {
