@@ -3,12 +3,13 @@ header {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #000;
+    border-radius: 0px 0px 15px 15px;
+    background-image: url("../images/Screenshot\ 2022-07-07\ at\ 09.06.00.png");
     color: rgb(255, 245, 158);
 
 }
 
 header>h1 {
     color: rgb(255, 245, 158);
-
+    background-color: rgba(0, 0, 0, 0) 0%;
 }

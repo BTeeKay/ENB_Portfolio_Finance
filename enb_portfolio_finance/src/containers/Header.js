@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 
-const Header = ({ users }) => {
+const Header = ({ users, totalValue }) => {
     return (
     <div>
     <header>
@@ -12,6 +12,7 @@ const Header = ({ users }) => {
             <>
             <h2>Welcome {user.name}</h2>
             <h3>Balance: {user.cash}</h3>
+            <h4>Total Value: {totalValue}</h4>
             </>
         )
         })}

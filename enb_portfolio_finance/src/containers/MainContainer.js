@@ -41,7 +41,7 @@ const MainContainer = () => {
     };
 
     const getStockData = (stock) => {
-        fetch(`https://cloud.iexapis.com/stable/stock/${stock}/quote?token=${API_KEY}`)
+        fetch(`https://cloud.iexapis.com/stable/stock/${stock}/quote?token=pk_51315487dc164686a2a06dfa86408424`)
             .then(result => result.json())
             .then(marketShare => setMarketShare(marketShare))
     }
@@ -90,8 +90,7 @@ const MainContainer = () => {
 
     return (
         <div className="maincontainer">
-            <h1>PLEASE LET THIS SHOW TOTAL {totalValue}</h1>
-            <Header users={users} />
+            <Header users={users} totalValue={totalValue}/>
             <div className='market-box-watchlist'>
                 <MarketBox getStockData={getStockData} stockNameFromSearch={stockNameFromSearch} marketShare={marketShare} addToWatchList={addToWatchList} addShareToPortfolio={addShareToPortfolio} />
                 <WatchList watchList={watchList} onClick={onClick} />

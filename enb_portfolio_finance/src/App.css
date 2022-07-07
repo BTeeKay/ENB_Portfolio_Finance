@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: "App";
+  background-color: rgb(236, 255, 254);
 }
 
 @font-face {
@@ -10,12 +11,12 @@
 
 
 .marketbox {
-  border: 10px solid #777;
+  border: 6px solid #777;
   margin: 10px;
   border-radius: 15px 15px 15px 15px;
   width: 50%;
   background-color: #000;
-  color: rgb(163, 163, 163);
+  color: rgb(180, 180, 180);
 
 }
 
@@ -30,14 +31,14 @@
 
 
 .stock-detail {
-  border: 10px solid #777;
+  border: 6px solid #777;
   margin: 10px;
   display: center;
   padding-top: 5px;
   width: 50%;
   border-radius: 15px 15px 15px 15px;
   background-color: #000;
-  color: rgb(163, 163, 163);
+  color: rgb(180, 180, 180);
 }
 
 
@@ -52,13 +53,13 @@
 
 
 .watch-list {
-  border: 10px solid #777;
+  border: 6px solid #777;
   margin: 10px;
   width: 50%;
   justify-content: center;
   border-radius: 15px;
   background-color: #000;
-  color: rgb(163, 163, 163);
+  color: rgb(180, 180, 180);
 }
 
 .watch-list>ul>li {
@@ -70,11 +71,11 @@
 }
 
 .chartbox {
-  border: 10px solid #777;
+  border: 6px solid #777;
   margin: 10px;
   border-radius: 15px;
   background-color: #000;
-  color: rgb(163, 163, 163);
+  color: rgb(180, 180, 180);
 }
 
 .chartbox>h3 {
@@ -82,11 +83,11 @@
 }
 
 .portfolio {
-  border: 10px solid #777;
+  border: 6px solid #777;
   margin: 10px;
   border-radius: 15px;
   background-color: #000;
-  color: rgb(163, 163, 163);
+  color: rgb(180, 180, 180);
 }
 
 .portfolio>h2 {

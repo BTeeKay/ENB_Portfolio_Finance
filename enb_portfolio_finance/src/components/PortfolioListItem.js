@@ -8,7 +8,7 @@ const PortfolioListItem = ({ share, onClick, sellPortfolioShare }) => {
 
     const [currentPrice, setCurrentPrice] = useState("");
 
-    fetch(`https://cloud.iexapis.com/stable/stock/${share.symbol}/quote?token=${API_KEY}`)
+    fetch(`https://cloud.iexapis.com/stable/stock/${share.symbol}/quote?token=pk_51315487dc164686a2a06dfa86408424`)
         .then(result => result.json())
         .then(price => setCurrentPrice(price["latestPrice"]))
     share.currentPrice = currentPrice
@@ -17,6 +17,8 @@ const PortfolioListItem = ({ share, onClick, sellPortfolioShare }) => {
 
     const totalCurrentPrice = share["Units Held"] * share.currentPrice;
 
+    const boughtValue = parseFloat(totalBoughtValue).toFixed(2);
+    const currentValue = parseFloat(totalCurrentPrice).toFixed(2);
 
     const handleClick = () => {
         onClick(share)
@@ -36,11 +38,17 @@ const PortfolioListItem = ({ share, onClick, sellPortfolioShare }) => {
                     <li>Units Held: {share["Units Held"]}</li>
                     <li>Bought Price: {share.latestPrice}</li>
                     <li>Current Price: {share.currentPrice}</li>
-                    <li >Total Price When Bought: {totalBoughtValue}</li>
+                    <li >Total Price When Bought: {boughtValue}</li>
                     <div className="green">
-                        <li>Total Current Price: {totalCurrentPrice}</li>
+                        <li>Total Current Price: {currentValue}</li>
                     </div>
                 </ul>
+                <button
+                type="button"
+                className="delete-btn"
+                onClick={handleDeleteClick}
+            >Sell All
+            </button>
             </div>
 
         )
@@ -53,9 +61,9 @@ const PortfolioListItem = ({ share, onClick, sellPortfolioShare }) => {
                 <li>Units Held: {share["Units Held"]}</li>
                 <li>Bought Price: {share.latestPrice}</li>
                 <li>Current Price: {share.currentPrice}</li>
-                <li>Total Price When Bought: {totalBoughtValue}</li>
+                <li>Total Price When Bought: {boughtValue}</li>
                 <div className="red">
-                    <li>Total Current Price: {totalCurrentPrice}</li>
+                    <li>Total Current Price: {currentValue}</li>
                 </div>
             </ul>
             <button
